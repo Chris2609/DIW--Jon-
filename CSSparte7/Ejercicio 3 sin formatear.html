@@ -14,31 +14,53 @@
       border-collapse: collapse;
     }
 
-	th[scope="col"]{
-		background-color: rgb(224, 224, 224);
-	}
+    th[scope="col"] {
+      background-color: rgb(224, 224, 224);
+    }
 
-	th[scope="row"]{
-		background-color: rgb(192, 230, 255);
-		padding-left: 15px;
-	}
+    tr:nth-child(2) th:nth-child(1) {
+      background: no-repeat left center url("imagenes/euro.png")
+        rgb(192, 230, 255);
+      padding-left: 15px;
+    }
 
-	th[scope="row"]:nth-child(1){
-		background-image: url("Imagenes/euro.png");
-		background-repeat: no-repeat;
-		background-position: left;
-	}
-	th[scope="row"]:nth-child(2){
-		background-image: url("Imagenes/dolar.png");
-		background-repeat: no-repeat;
-		background-position: left;
-	}
+    tr:nth-child(3) th:nth-child(1) {
+      background: no-repeat left center url("imagenes/dolar.png")
+        rgb(192, 230, 255);
+      padding-left: 15px;
+    }
+
+    tr:nth-child(4) th:nth-child(1) {
+      background: no-repeat left center url("imagenes/libra.png")
+        rgb(192, 230, 255);
+      padding-left: 15px;
+    }
+
+    tr:nth-child(5) th:nth-child(1) {
+      background: no-repeat left center url("imagenes/yen.png")
+        rgb(192, 230, 255);
+      padding-left: 15px;
+    }
+
     th,
     tr,
     td {
       border: 1px solid black;
-	  padding: 5px;
+      padding: 5px;
     }
+
+    tr:nth-child(even){
+      background-color: rgb(255, 255, 178);
+    }
+
+    tr:nth-child(odd){
+      background-color: white;
+    }
+
+    tr:hover{
+      background-color: yellow;
+    }
+
   </style>
 
   <body>
