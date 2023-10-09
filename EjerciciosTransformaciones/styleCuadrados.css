@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    }
+    .contenedor {
+    width: 340px;
+    height: 250px;
+    margin: 0 auto;
+    border: 1px solid #B82E11;
+    position: relative;
+    }
+    .contenedor p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+    }
+    .transformacion {
+    width:100px;
+    height:100px;
+    border: 1px solid #B82E11;
+    position: absolute;
+    }
+    [class^=mover] {
+    top: 25px;
+    left: 20px;
+    }
+    .mover {
+        transform: translate(100px, 100px);
+    }
+    .moverX {
+        transform: translateX(200px);
+    }

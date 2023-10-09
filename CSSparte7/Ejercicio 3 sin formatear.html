@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="EJERCICIOS " />
+    <title>EJERCICIOS</title>
+    <link href="estilos/estilo.css" rel="stylesheet" />
+    <script type="text/javascript" src="scripts/funciones.js"></script>
+  </head>
+
+  <style>
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+	th[scope="col"]{
+		background-color: rgb(224, 224, 224);
+	}
+
+	th[scope="row"]{
+		background-color: rgb(192, 230, 255);
+		padding-left: 15px;
+	}
+
+	th[scope="row"]:nth-child(1){
+		background-image: url("Imagenes/euro.png");
+		background-repeat: no-repeat;
+		background-position: left;
+	}
+	th[scope="row"]:nth-child(2){
+		background-image: url("Imagenes/dolar.png");
+		background-repeat: no-repeat;
+		background-position: left;
+	}
+    th,
+    tr,
+    td {
+      border: 1px solid black;
+	  padding: 5px;
+    }
+  </style>
+
+  <body>
+    <table summary="Tipos de cambio">
+      <tr>
+        <th scope="col">Cambio</th>
+        <th scope="col">Compra</th>
+        <th scope="col">Venta</th>
+        <th scope="col">M&aacute;ximo</th>
+        <th scope="col">M&iacute;nimo</th>
+      </tr>
+      <tr>
+        <th scope="row">Euro/Dolar</th>
+        <td>1.2524</td>
+        <td>1.2527</td>
+        <td>1.2539</td>
+        <td>1.2488</td>
+      </tr>
+      <tr>
+        <th scope="row">Dolar/Yen</th>
+        <td>119.01</td>
+        <td>119.05</td>
+        <td>119.82</td>
+        <td>119.82</td>
+      </tr>
+      <tr>
+        <th scope="row">Libra/Dolar</th>
+        <td>1.8606</td>
+        <td>1.8611</td>
+        <td>1.8651</td>
+        <td>1.8522</td>
+      </tr>
+      <tr>
+        <th scope="row">Euro/Yen</th>
+        <td>149.09</td>
+        <td>149.13</td>
+        <td>149.79</td>
+        <td>148.96</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="EJERCICIOS POSICIONAMIENTO">
+	<title>EJERCICIOS</title>
+	<link href="estilos/estilos.css" rel="stylesheet">
+	
+</head>
+
+<style>
+
+header{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid orange;
+}
+
+.logo{
+    width: 200px;
+    height: 35px;
+    background: url(imagenes/logo.png) no-repeat;
+    background-size: 200px;
+    padding-right: 10px;
+    border-right: 1px solid grey;
+    margin-left: 100px;
+}
+
+li{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    margin: 10px;
+    color: rgb(87, 87, 87);
+}
+
+.Menu.Izquierda{
+    float: right;
+    position: relative;
+}
+
+.Menu.Derecha{
+    float: right;
+    position: relative;
+    right: -800px;
+}
+
+</style>
+
+<body>
+  <header>
+      <div class="logo">
+	  </div>
+      <nav class="Menu Izquierda">
+
+                <ul>
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Nosotros</a></li>
+                      <li><a href="#">Destacado</a></li>
+                      <li><a href="#">Trabajos</a></li>
+                      <li><a href="#">Contacto</a></li>
+                </ul>
+           
+      </nav>
+    
+      <nav class="Menu Derecha">
+      
+          <ul>
+              <li><a href="#">Blog</a></li>
+              <li>&bull;</li>
+              <li><a href="#">Clientes</a></li>
+          </ul>
+
+      </nav>
+   </header>  
+</body>
+</html>
+
+
+
+
+
+
+
+

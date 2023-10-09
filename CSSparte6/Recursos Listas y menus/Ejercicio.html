@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="EJERCICIOS " />
+    <title>EJERCICIOS</title>
+    <link href="estilos/estilos.css" rel="stylesheet" />
+    <script type="text/javascript" src="scripts/funciones.js"></script>
+  </head>
+
+  <style>
+    h2 {
+      color: blue;
+      text-align: center;
+    }
+    .imagen li,
+    a {
+      list-style-image: url("imagenes/Libro.png");
+      text-decoration: none;
+    }
+
+    #menuhorizontal li {
+      display: inline;
+      padding: 5px 30px 5px 30px;
+      background-color: black;
+    }
+
+    #menuhorizontal a,
+    #vertical a {
+      color: white;
+    }
+
+    #menuhorizontal2 li {
+      display: inline;
+      padding: 10px;
+      margin-right: 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: rgb(62, 128, 0) 0px 0px 10px;
+    }
+
+    #menuhorizontal2 li:nth-child(2) {
+      background-color: rgb(185, 185, 185);
+    }
+
+    #menuhorizontal2 li:last-child {
+      background-color: grey;
+    }
+
+    #vertical li {
+      list-style: none;
+      background-color: blue;
+      display: block;
+      padding: 8px;
+      width: 200px;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    #depegable {
+      position: relative;
+    }
+    #despegable li a {
+      color: white;
+    }
+
+    #despegable li a:hover {
+      color: black;
+    }
+    #despegable li {
+      list-style: none;
+      background-color: rgb(72, 128, 128);
+      margin-right: 10px;
+      padding: 7px 70px 7px 5px;
+    }
+
+    #despegable li:hover {
+      background-color: rgb(102, 184, 184);
+    }
+    .nivel1 {
+      display: inline;
+    }
+
+    .nivel1 ul {
+      display: none;
+      margin-top: 3px;
+    }
+
+    .nivel1:hover > ul {
+      display: block;
+      position: absolute;
+    }
+
+    .nivel1 ul li {
+      border-top: black 1px solid;
+      margin-top: 3.5px;
+    }
+
+    .nivel1:nth-child(2) ul {
+      margin-left: 147px;
+    }
+
+    .nivel1:nth-child(3) ul {
+      margin-left: 295px;
+    }
+  </style>
+
+  <body>
+    <h2>LISTA CON IMAGENES</h2>
+    <ul class="imagen">
+      <li><a href="#">ELEMENTO 1</a></li>
+      <li><a href="#">ELEMENTO 2</a></li>
+      <li><a href="#">ELEMENTO 3</a></li>
+      <li><a href="#">ELEMENTO 4</a></li>
+    </ul>
+
+    <h2>MENU HORIZONTAL</h2>
+
+    <nav>
+      <ul id="menuhorizontal">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">A cerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <h2>MENU HORIZONTAL DIFERENTE</h2>
+
+    <nav id="menuhorizontal2">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">A cerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <h2>MENU VERTICAL</h2>
+
+    <nav id="vertical">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">A cerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <h2>MENU DESPEGABLE</h2>
+
+    <nav id="despegable">
+      <ul>
+        <li class="nivel1">
+          <a href="#" class="nivel1">Opción 1</a>
+          <ul>
+            <li><a href="#">Opción 1.1</a></li>
+            <li><a href="#">Opción 1.2</a></li>
+          </ul>
+        </li>
+        <li class="nivel1">
+          <a href="#" class="nivel1">Opción 2</a>
+          <ul>
+            <li><a href="#">Opción 2.1</a></li>
+            <li><a href="#">Opción 2.2</a></li>
+            <li><a href="#">Opción 2.3</a></li>
+            <li><a href="#">Opción 2.4</a></li>
+          </ul>
+        </li>
+        <li class="nivel1">
+          <a href="#" class="nivel1">Opción 3</a>
+          <ul>
+            <li><a href="#">Opción 3.1</a></li>
+            <li><a href="#">Opción 3.2</a></li>
+            <li><a href="#">Opción 3.3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
