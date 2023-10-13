@@ -21,7 +21,9 @@
     li {
       list-style: none;
       float: left;
-      width: 896px;
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 10px;
     }
 
     label {
@@ -34,9 +36,9 @@
       padding: 5px;
     }
 
-    input:focus{
+    input:focus {
       outline: none;
-      border: 2px solid #E6B700;
+      border: 2px solid #e6b700;
       border-radius: 3px;
     }
 
@@ -47,20 +49,51 @@
       width: 350px;
     }
 
-    li:nth-of-type(1) p{
+    li:nth-of-type(1) p {
       display: none;
     }
 
-    li:nth-of-type(2) p{
+    li:nth-of-type(1):hover p {
+      display: inline;
+      position: relative;
+      left: 100px;
+      bottom: 150px;
+    }
+
+    li:nth-of-type(2) p {
       display: none;
     }
 
-    li:nth-of-type(3) p{
+    li:nth-of-type(2):hover p {
+      display: inline;
+      position: relative;
+      left: 100px;
+      bottom: 150px;
+    }
+
+    li:nth-of-type(3) {
+      margin-bottom: 20px;
+    }
+
+    li:nth-of-type(3) p {
       display: none;
     }
 
-    li:nth-of-type(4) p{
+    li:nth-of-type(3):hover p {
+      display: inline;
+      position: relative;
+      left: 50px;
+    }
+
+    li:nth-of-type(4) p {
       display: none;
+    }
+
+    li:nth-of-type(4):hover p{
+      display: inline;
+      position: relative;
+      left: 50px;
+      bottom: 30px;
     }
 
     li:nth-last-of-type(2) span {
@@ -85,8 +118,14 @@
     }
 
     li label:first-child {
+      float: left;
       font-weight: bold;
       margin-bottom: 10px;
+      width: 90px;
+    }
+
+    li div {
+      display: inline-block;
     }
 
     li:hover {
@@ -99,7 +138,8 @@
 
     li:nth-child(5) {
       position: relative;
-      left: 1145px;
+      left: 450px;
+      top: 20px;
     }
   </style>
 
