@@ -1,0 +1,234 @@
+body {
+  background: white;
+  margin: 50px;
+}
+
+/* EJEMPLO 1*/
+#recuadro1 {
+  border-radius: 20px;
+  background-color: #ddd;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s;
+}
+
+#recuadro1:hover {
+  width: 300px;
+}
+
+#recuadro2 {
+  border-radius: 20px;
+  background-color: #ff0;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s;
+  -moz-transition: width 1s;
+  -ms-transition: width 1s;
+  -webkit-transition: width 1s;
+  -o-transition: width 1s;
+}
+
+#recuadro2:hover {
+  width: 300px;
+}
+
+/* EJEMPLO 2*/
+#recuadro3 {
+  border-radius: 20px;
+  background-color: #ff0;
+  width: 200px;
+  padding: 10px;
+  transition: 1s;
+}
+
+#recuadro3:hover {
+  width: 300px;
+  background-color: #f00;
+}
+
+/*EJEMPLO 3*/
+/*Cambiar valores, tiempos, ver como le afecta a la transicion */
+.box-demo-transitions {
+  position: relative;
+  height: 340px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #d8d8d8;
+  background: #efefef;
+}
+.box-effect {
+  position: relative;
+  height: 40px;
+  width: 80px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background: #2a2925;
+}
+.box-effect.ease {
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
+}
+.box-effect.ease-in {
+  -webkit-transition: all 3s ease-in;
+  -moz-transition: all 3s ease-in;
+  -o-transition: all 3s ease-in;
+  transition: all 3s ease-in;
+}
+.box-effect.ease-out {
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+  transition: all 3s ease-out;
+}
+.box-effect.ease-in-out {
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+}
+.box-effect.linear {
+  -webkit-transition: all 3s linear;
+  -moz-transition: all 3s linear;
+  -o-transition: all 3s linear;
+  transition: all 3s linear;
+}
+.box-effect.cubic-bezier {
+  -webkit-transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+  -moz-transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+  -o-transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+  transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+}
+
+.box-demo-transitions:hover .box-effect {
+  margin-left: 455px;
+  background-color: #6bab96;
+}
+
+/* EJEMPLO 4*/
+
+#recuadro41 {
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #ddd;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  -ms-transition: width 1s ease;
+  -webkit-transition: width 1s ease;
+  -o-transition: width 1s ease;
+}
+
+#recuadro41:hover {
+  width: 300px;
+}
+
+#recuadro42 {
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #ddd;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -ms-transition: width 1s linear;
+  -webkit-transition: width 1s linear;
+  -o-transition: width 1s linear;
+}
+
+#recuadro42:hover {
+  width: 300px;
+}
+
+#recuadro43 {
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #ddd;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s ease-in;
+  -moz-transition: width 1s ease-in;
+  -ms-transition: width 1s ease-in;
+  -webkit-transition: width 1s ease-in;
+  -o-transition: width 1s ease-in;
+}
+
+#recuadro43:hover {
+  width: 300px;
+}
+
+#recuadro44 {
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #ddd;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s ease-out;
+  -moz-transition: width 1s ease-out;
+  -ms-transition: width 1s ease-out;
+  -webkit-transition: width 1s ease-in-out;
+  -o-transition: ease-out;
+}
+
+#recuadro44:hover {
+  width: 300px;
+}
+
+#recuadro45 {
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #ddd;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -ms-transition: width 1s ease-in-out;
+  -webkit-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+}
+
+#recuadro45:hover {
+  width: 300px;
+}
+
+/*EJEMPLO 5*/
+
+#recuadro51 {
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #ddd;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s 1s;
+  -moz-transition: width 1s 1s;
+  -ms-transition: width 1s 1s;
+  -webkit-transition: width 1s 1s;
+  -o-transition: width 1s 1s;
+}
+
+#recuadro51:hover {
+  width: 300px;
+}
+
+#recuadro52 {
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #ff0;
+  width: 200px;
+  padding: 10px;
+  transition: width 1s, background-color 1s linear 1s;
+  -moz-transition: width 1s, background-color 1s linear 1s;
+  -ms-transition: width 1s, background-color 1s linear 1s;
+  -webkit-transition: width 1s, background-color 1s linear 1s;
+  -o-transition: width 1s, background-color 1s linear 1s;
+}
+
+#recuadro52:hover {
+  width: 300px;
+  background-color: #ff8000;
+}
