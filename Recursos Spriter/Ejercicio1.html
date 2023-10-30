@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      #ejercicio1 {
+        width: 250px;
+        height: 100px;
+        background-image: url("imagenes/apagencen.png");
+      }
+
+      #ejercicio1:hover {
+        background-position-y: 100px;
+      }
+
+      #ejercicio2-1 {
+        width: 28px;
+        height: 15px;
+        background-image: url("imagenes/sprite-VentanaWindows.png");
+        display: inline-block;
+      }
+      #ejercicio2-2 {
+        width: 28px;
+        height: 15px;
+        background-image: url("imagenes/sprite-VentanaWindows.png");
+        background-position-x: 28px;
+        display: inline-block;
+      }
+      #ejercicio2-3 {
+        width: 28px;
+        height: 15px;
+        background-image: url("imagenes/sprite-VentanaWindows.png");
+        background-position-x: 56px;
+        display: inline-block;
+      }
+
+      #ejercicio3 {
+        text-align: center;
+      }
+      #ejercicio3-1 {
+        width: 44.66px;
+        height: 44px;
+        background-image: url("imagenes/barra.gif");
+        display: inline-block;
+        margin-right: 500px;
+      }
+      #ejercicio3-2 {
+        width: 44.66px;
+        height: 44px;
+        background-image: url("imagenes/barra.gif");
+        background-position-x: -44.66px;
+        display: inline-block;
+        margin-right: 500px;
+      }
+      #ejercicio3-3 {
+        width: 44.66px;
+        height: 44px;
+        background-image: url("imagenes/barra.gif");
+        background-position-x: 44.66px;
+        display: inline-block;
+      }
+      #ejercicio4 {
+        width: 50px;
+        height: 72px;
+        margin: auto;
+        background: url("imagenes/pinguinos.png") repeat-x;
+        animation: saludar 1s steps(10) infinite;
+
+      }
+      @keyframes saludar {
+        0% {
+          background-position: 0;
+        }
+        100% {
+          background-position: -500px;
+        }
+      }
+    </style>
+
+    <div id="ejercicio1"></div>
+    <br />
+    <div id="ejercicio2-1"></div>
+    <div id="ejercicio2-2"></div>
+    <div id="ejercicio2-3"></div>
+    <br />
+    <div id="ejercicio3">
+      <div id="ejercicio3-1"></div>
+      <div id="ejercicio3-2"></div>
+      <div id="ejercicio3-3"></div>
+    </div>
+    <br />
+    <div id="ejercicio4"></div>
+  </body>
+</html>
