@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      transition: 1s all ease-in-out;
+      text-align: center;
+    }
+    .mapa {
+      position: relative;
+    }
+
+    .notas li {
+      position: absolute;
+      border: 2px solid rgb(255, 255, 255);
+      list-style: none;
+      display: none;
+    }
+
+    .notas li:hover {
+      border: 2px solid rgb(255, 47, 47);
+    }
+
+    .mapa:hover .notas li {
+      display: block;
+    }
+
+    .notas li p {
+      position: absolute;
+      top: 100%;
+      margin: 10px 0 0 0;
+      padding: 0.3em;
+      background-color: brown;
+      color: white;
+      display: none;
+    }
+
+    .notas li:hover p {
+      display: block;
+    }
+
+    .notas li.viego {
+      width: 140px;
+      height: 110px;
+      top: 100px;
+      left: 335px;
+    }
+
+    .notas li.yorick {
+      width: 140px;
+      height: 110px;
+      top: 50px;
+      left: 525px;
+    }
+
+    .notas li.mordekaiser {
+      width: 140px;
+      height: 130px;
+      top: 50px;
+      left: 685px;
+    }
+
+    .notas li.karthus {
+      width: 140px;
+      height: 110px;
+      top: 50px;
+      left: 880px;
+    }
+
+    .notas li.olaf {
+      width: 140px;
+      height: 110px;
+      top: 50px;
+      left: 1060px;
+    }
+
+    .notas li.sona {
+      width: 140px;
+      height: 110px;
+      top: 50px;
+      left: 1240px;
+    }
+
+    .notas li.kayle {
+      width: 140px;
+      height: 110px;
+      top: 50px;
+      left: 1440px;
+    }
+
+    #viegotooltip {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      width: 250px;
+      right: 180px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .viego:hover #viegotooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #yoricktooltip {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s;
+      width: 130px;
+      top: 140%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .yorick:hover #yoricktooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #mordekaisertooltip {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s;
+      width: 130px;
+      top: 140%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .mordekaiser:hover #mordekaisertooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #karthustooltip {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s;
+      width: 130px;
+      top: 140%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .karthus:hover #karthustooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #olaftooltip {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s;
+      width: 130px;
+      top: 140%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .olaf:hover #olaftooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #sonatooltip {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s;
+      width: 130px;
+      top: 140%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .sona:hover #sonatooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #kayletooltip {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s;
+      width: 200px;
+      top: -5px;
+      left: 115%;
+    }
+
+    .kayle:hover #kayletooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+
+  <body>
+    <div class="mapa">
+      <img src="splashPentakill.jpg" />
+
+      <ul class="notas">
+        <li class="viego">
+          <p>Viego</p>
+          <span id="viegotooltip"
+            >El nombre del que ahora representa una grave amenaza para todos era
+            y es Viego. Era el segundo hijo del rey de una dinastía y no estaba
+            hecho para el liderazgo. Más bien al contrario, vivía una vida de
+            lujos que lo tornaron engreído y egoísta.</span
+          >
+        </li>
+        <li class="yorick">
+          <p>Yorick</p>
+          <span id="yoricktooltip"
+            >Último superviviente de una orden religiosa olvidada hace tiempo,
+            carga con la bendición y la maldición del poder sobre los muertos.
+            Atrapado en las Islas de la Sombra, sus únicos compañeros son
+            cadáveres en descomposición y los espíritus aullantes que
+            atrae.</span
+          >
+        </li>
+        <li class="mordekaiser">
+          <p>Mordekaiser</p>
+          <span id="mordekaisertooltip"
+            >Mordekaiser fue mortal en su tiempo, un brutal rey brujo que
+            gobernó sobre las tierras del oriente de Valoran mucho antes del
+            advenimiento de Demacia o Noxus. Entraba en combate embutido en una
+            pesada armadura de hierro y masacraba a todos los que se atrevían a
+            oponérsele, aplastándolos bajo su maza mágica, Ocaso.</span
+          >
+        </li>
+        <li class="karthus">
+          <p>Karthus</p>
+          <span id="karthustooltip"
+            >Karthus, heraldo del olvido, es un espíritu inmortal cuyos
+            pavorosos cantos preceden al horror de su dantesca aparición. Los
+            vivos temen la eternidad de la no muerte, pero Karthus solo percibe
+            hermosura y pureza en su abrazo, una comunión perfecta entre la vida
+            y la muerte.</span
+          >
+        </li>
+        <li class="olaf">
+          <p>Olaf</p>
+          <span id="olaftooltip"
+            >Olaf porta sus hachas de forma que es una fuerza imparable de
+            destrucción que no quiere nada, salvo morir en un combate glorioso.
+            Natural de Lokfar, una brutal península de Freljord, una vez escuchó
+            una profecía que lo avisaba de una muerte tranquila, el destino de
+            un cobarde y un gran insulto entre los suyos.</span
+          >
+        </li>
+        <li class="sona">
+          <p>Sona</p>
+          <span id="sonatooltip"
+            >Sona es una virtuosa del etwahl que solo se comunica a través de
+            sus elegantes acordes y vibrantes arias. Sus refinados modales han
+            conquistado a la nobleza demaciana, aunque algunos sospechan que sus
+            arrebatadoras melodías encierran magia, lo que supone un peligro en
+            el reino.</span
+          >
+        </li>
+        <li class="kayle">
+          <p>Kayle</p>
+          <span id="kayletooltip"
+            >Kayle, gran heroína y la más poderosa de su especie, es una
+            guerrera angelical que se ha dedicado a purgar a los que no tienen
+            salvación. Después de que el conflicto dividiera a su gente, ella
+            tomó su armadura encantada y su espada flamígera en el nombre del
+            orden, renegando su propia piel y sangre en el proceso.</span
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
