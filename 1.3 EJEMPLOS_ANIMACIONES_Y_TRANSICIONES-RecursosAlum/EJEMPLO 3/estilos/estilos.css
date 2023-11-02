@@ -214,7 +214,7 @@ div#yoyo {
 animation-name: animacion6;
 animation-duration: 2s;
 animation-iteration-count: infinite;
-animation-direction: alternate;
+animation-direction: alternate-reverse;
 
 }
 
