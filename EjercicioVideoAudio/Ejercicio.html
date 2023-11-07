@@ -5,7 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        background: url("Recursos/fondo.jpg") no-repeat center;
+        background-size: cover;
+        min-height: 98vh;
+        text-align: center;
+    }
+
+    .video{
+        position: relative;
+        margin-top: 90px;
+        max-width: 41%;
+        min-height: 41%;
+        width: 100%;
+        border: 3px solid beige;
+    }
+
+    ::cue(.npcs){
+        color: yellow;
+    }
+
+    ::cue(.mj){
+        color: orange;
+    }
+
+    ::cue(.blanco){
+        color: white;
+    }
+
+    ::cue(.spiderman){
+        color: red;
+    }
+
+    ::cue(.jjj){
+        color: burlywood;
+    }
+
+    ::cue(.venom){
+        color: black;
+        background-color: whitesmoke;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 2em;
+    }
+</style>
 <body>
-    <video src="Video/Y2meta.app-Spooder-Man Movie Trailer-(1080p).mp4" preload controls autoplay width="600px" ></video>
+    
+    <div id="video">
+        <video class="video" src="Recursos/Y2meta.app-Spooder-Man Movie Trailer-(1080p).mp4" preload controls loop poster="Recursos/miniatura.jpg">
+            <track src="Recursos/subtitulos.vtt" srclang="es" default></track>
+        </video>
+    </div>
+    <div id="cancion">
+        <audio src="Recursos/cancion.mp3" controls preload loop></audio>
+    </div>
 </body>
 </html>
