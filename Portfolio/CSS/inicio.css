@@ -1,0 +1,62 @@
+/*Paleta
+https://www.pinterest.es/pin/658158933073675143/
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../Imagenes/FondoProvisional.png") fixed no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+}
+
+.header {
+  background-color: rgba(90, 90, 90, 0.7);
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(6px);
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 60px;
+}
+
+.logo {
+  font-size: 25px;
+}
+
+.nav {
+  padding-top: 0.95em;
+}
+
+.nav_list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.main {
+  margin-top: 80px;
+}
