@@ -11,9 +11,9 @@ https://www.pinterest.es/pin/658158933073675143/
 body {
   background: url("../Imagenes/FondoProvisional.png") fixed no-repeat;
   background-size: cover;
-  height: 100vh;
 }
 
+/*Barra de navegación*/
 ul {
   list-style: none;
 }
@@ -23,20 +23,17 @@ a {
   text-decoration: none;
 }
 
-body {
-  height: 100vh;
-}
-
-.header {
-  background-color: rgba(90, 90, 90, 0.7);
-  border-bottom: 1px solid black;
+header {
+  background-color: #390ca352;
+  border-bottom: 1px solid #b5179e;
   position: fixed;
   top: 0;
   width: 100%;
   backdrop-filter: blur(6px);
+  z-index: 999;
 }
 
-.header_content {
+.contenidoHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,11 +49,86 @@ body {
   padding-top: 0.95em;
 }
 
-.nav_list {
-  display: flex;
-  column-gap: 40px;
-}
-
 .main {
   margin-top: 80px;
 }
+
+.navResponsive {
+  width: 100%;
+  height: 100vh;
+  background-color: #390ca3de;
+  text-align: center;
+  top: 3.8em;
+  left: -400vh;
+  position: absolute;
+  transition: all 0.6s ease-in-out;
+}
+
+#check,
+.fas.fa-bars {
+  display: none;
+}
+
+#check:checked ~ .navResponsive {
+  left: 0;
+}
+
+.linksResponsive {
+  color: white;
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+@media (max-width: 549px) {
+  nav a {
+    display: none;
+  }
+
+  .fas.fa-bars {
+    display: inline;
+    position: relative;
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 395px) {
+  .fas.fa-bars {
+    bottom: 0.4em;
+    left: 3em;
+  }
+}
+/*Fin barra de navegación*/
+
+.inicio {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.inicio h1{
+  color: #4CC9F0;
+}
+
+.inicio h5{
+  color: #4361EE;
+}
+
+.main{
+  position: relative;
+  top: 100vh;
+}
+
+.contenedorTexto{
+  background-color: #3e37c9ab;
+}
+
+.contenedorTexto h1{
+  color: #B5179E;
+}
+
+.contenedorTexto p{
+  color: #4895ff;
+}
+
