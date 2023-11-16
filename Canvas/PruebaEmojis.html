@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        iniciar();
+      };
+
+      function iniciar() {
+        var elem = document.getElementById("canvas");
+        var canvas = elem.getContext("2d");
+        canvas.beginPath();
+        canvas.arc(100, 100, 50, 0, Math.PI * 2, true);
+        canvas.closePath();
+        canvas.fill();
+
+        canvas.fillStyle = "#FFF";
+        canvas.beginPath();
+        canvas.arc(98, 95, 35, 0, Math.PI, false); // boca (sentido reloj)
+        canvas.closePath();
+        canvas.fill();
+        canvas.moveTo(65, 65);
+        canvas.beginPath();
+        canvas.arc(85, 65, 5, 0, Math.PI * 2, true); // ojo izquierdo
+        canvas.closePath();
+        canvas.fill();
+        canvas.moveTo(95, 65);
+        canvas.beginPath();
+        canvas.arc(115, 65, 5, 0, Math.PI * 2, true); // ojo derecho
+        canvas.closePath();
+        canvas.fill();
+      }
+
+    //   addEventListener("load", iniciar);
+    </script>
+
+    <canvas id="canvas" width="500px" height="300px"></canvas>
+  </body>
+</html>
