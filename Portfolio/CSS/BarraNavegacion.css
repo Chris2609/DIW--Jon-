@@ -103,3 +103,8 @@ ul {
     background-color: transparent;
   }
   /*Fin barra de navegación*/
+
+  footer{
+    position: relative;
+    top: 49px;
+  }

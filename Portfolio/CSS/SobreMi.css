@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+}
+
+.container {
+    max-width: 90%; /* Usar porcentaje para hacerlo más flexible */
+    margin: 0 auto;
+    padding: 0 2em; /* Utilizar unidades relativas */
+    margin-top: 4em;
+}
+
+h1 {
+    color: #4CC9F0;
+    font-size: 3em;
+    letter-spacing: 4px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+img {
+    max-width: 100%; /* Para hacer que las imágenes sean responsive */
+    height: auto;
+    border-radius: 50%; /* Corregido para un círculo perfecto */
+}
+
+.curriculum {
+    display: inline-block;
+    padding: 1em 2em; /* Utilizar unidades relativas */
+    background-color: #994cf0;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+}
+
+main {
+    width: 100%;
+}
+
+/* Media query para ajustes en tamaños de pantalla más pequeños */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0.5em;
+    }
+}
