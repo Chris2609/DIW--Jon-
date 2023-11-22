@@ -1,0 +1,14 @@
+.padre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.padre{
+    display: grid;
+    place-items: center;
+}
+
+body{
+    background-image: linear-gradient(red, yellow);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 150px;
+        display: flex;
+      }
+
+      ul li {
+        position: relative;
+      }
+
+      li ul {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        display: none;
+      }
+
+      ul li a {
+        display: block;
+        text-decoration: none;
+        color: #777;
+        background: #fff;
+        padding: 5px;
+        border: 1px solid #ccc;
+        padding-right: 50px;
+      }
+
+      li:hover ul {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="#">OPC. 1</a></li>
+      <li>
+        <a href="#">OPC. 2</a>
+        <ul>
+          <li><a href="#">OPC. 2.1</a></li>
+          <li><a href="#">OPC. 2.2</a></li>
+          <li><a href="#">OPC. 2.3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">OPC. 3</a>
+        <ul>
+          <li><a href="#">OPC. 3.1</a></li>
+          <li><a href="#">OPC. 3.2</a></li>
+          <li><a href="#">OPC. 3.3</a></li>
+          <li><a href="#">OPC. 3.4</a></li>
+          <li><a href="#">OPC. 3.5</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">OPC. 4</a>
+        <ul>
+          <li><a href="#">OPC. 4.1</a></li>
+          <li><a href="#">OPC. 4.2</a></li>
+          <li><a href="#">OPC. 4.3</a></li>
+          <li><a href="#">OPC. 4.4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

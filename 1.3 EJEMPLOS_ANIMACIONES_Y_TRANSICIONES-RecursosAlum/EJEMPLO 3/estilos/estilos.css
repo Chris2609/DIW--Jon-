@@ -115,7 +115,6 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-
 }
 
 #recuadro4:hover {
@@ -132,9 +131,6 @@ body {
     background-color: #ff0;
   }
 }
-
-
-
 body {
   background: white;
   margin: 50px;

@@ -1,71 +1,72 @@
 /* EJEMPLO 1*/
 
-.contenedor{
-width:300px;
-height:275px;
-border: 1px solid #CCC;
+.contenedor {
+  width: 300px;
+  height: 275px;
+  border: 1px solid #ccc;
 }
 
-
-.Figura{
-width: 100px;
-height:100px;
-border: 1px solid #CCC;
+body{
+  background-image: linear-gradient(to right ,red, yellow);
 }
 
 .Figura {
-	opacity: 0.5;
-	background-color: #D2D2D2;
-	color: black;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+}
+
+.Figura {
+  opacity: 0.5;
+  background-color: #d2d2d2;
+  color: black;
   transition: all ease-in-out 1s;
 }
 .Figura:hover {
-	opacity: 1;
-	background-color: greenyellow;
-	-webkit-transform: rotate(90deg) translate(200px);
-	-moz-transform: rotate(90deg) translate(200px);
-	-o-transform: rotate(90deg) translate(200px);
-	transform: rotate(90deg) translate(175px);
-	-webkit-transition: all ease-in-out 1s;
-	-moz-transition: all ease-in-out 1s;
-	-o-transition: all ease-in-out 1s;
-	transition: all ease-in-out 1s;
-
+  opacity: 1;
+  background-color: greenyellow;
+  -webkit-transform: rotate(90deg) translate(200px);
+  -moz-transform: rotate(90deg) translate(200px);
+  -o-transform: rotate(90deg) translate(200px);
+  transform: rotate(90deg) translate(175px);
+  -webkit-transition: all ease-in-out 1s;
+  -moz-transition: all ease-in-out 1s;
+  -o-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
 }
 
 /* EJEMPLO 2 : Sea mas grande el rectangulo, con una transicion hover ease-out */
 
-#ej-transicion-css{
-    width: 200px;
-    background-color: #C00;
-    color: #fff;
-    margin: auto;
-    padding: 10px;
-    -webkit-transition: width ease-in 3s; 
-    -moz-transition: width ease-in 3s; 
-    -o-transition: width ease-in 3s; 
-    transition: width ease-in 3s; 
+#ej-transicion-css {
+  width: 200px;
+  background-color: #c00;
+  color: #fff;
+  margin: auto;
+  padding: 10px;
+  -webkit-transition: width ease-in 3s;
+  -moz-transition: width ease-in 3s;
+  -o-transition: width ease-in 3s;
+  transition: width ease-in 3s;
 }
-#ej-transicion-css:hover{
-    width: 300px;
-    -webkit-transition: width ease-out 1s; 
-    -moz-transition: width ease-out 1s; 
-    -o-transition: width ease-out 1s; 
-    transition: width ease-out 1s; 
-}	
-
+#ej-transicion-css:hover {
+  width: 300px;
+  -webkit-transition: width ease-out 1s;
+  -moz-transition: width ease-out 1s;
+  -o-transition: width ease-out 1s;
+  transition: width ease-out 1s;
+}
 
 /* EJEMPLO 3: Cambie de color al pasar el raton, pero de forma progresiva*/
 .ejemplo3 a {
   padding: 5px 10px;
   background: #9c3;
-  text-decoration:none;
-  color:#fff;
-  }
+  text-decoration: none;
+  color: #fff;
+}
 .ejemplo3 a:hover {
   background: #f25;
-  }
- 
+}
+
 .ejemplo3 a {
   padding: 5px 10px;
   background: #9c3;
@@ -75,145 +76,183 @@ border: 1px solid #CCC;
   -moz-transition-property: all;
   -moz-transition-duration: 1;
   -moz-transition-timing-function: 3s;
-  }
-
-    /* EJEMPLO 4: cambie: altura, anchura y color*/
-
-  /* EJEMPLO 4*/
-  .caja1{
-    margin:10px;
-    border:1px solid #CCC;
-    /* Propiedades a animar */
-    width:100px;
-    height:100px;
-    background-color:#FF0000;
-    /* Final propiedades */
-   -webkit-transition-property: width, height, background-color; 
-   -webkit-transition-duration: 0.5s, 1s, 1s; 
-   -webkit-transition-timing-function: ease, ease-out, ease;
-   -webkit-transition-delay:0s ,0.5s, 1.5s;
-   -moz-transition-property: width, height, background-color; 
-   -moz-transition-duration: 0.5s, 1s, 1s; 
-   -moz-transition-timing-function: ease, ease-out, ease;
-   -moz-transition-delay:0s ,0.5s, 1.5s;
-   -o-transition-property: width, height, background-color; 
-   -o-transition-duration: 0.5s, 1s, 1s; 
-   -o-transition-timing-function: ease, ease-out, ease;
-   -o-transition-delay:0s ,0.5s, 1.5s;
-   transition-property: width, height, background-color; 
-   transition-duration: 0.5s, 1s, 1s; 
-   transition-timing-function: ease, ease-out, ease;
-   transition-delay:0s ,0.5s, 1.5s;
 }
-.caja1:hover{
+
+/* EJEMPLO 4: cambie: altura, anchura y color*/
+
+/* EJEMPLO 4*/
+.caja1 {
+  margin: 10px;
+  border: 1px solid #ccc;
+  /* Propiedades a animar */
+  width: 100px;
+  height: 100px;
+  background-color: #ff0000;
+  /* Final propiedades */
+  -webkit-transition-property: width, height, background-color;
+  -webkit-transition-duration: 0.5s, 1s, 1s;
+  -webkit-transition-timing-function: ease, ease-out, ease;
+  -webkit-transition-delay: 0s, 0.5s, 1.5s;
+  -moz-transition-property: width, height, background-color;
+  -moz-transition-duration: 0.5s, 1s, 1s;
+  -moz-transition-timing-function: ease, ease-out, ease;
+  -moz-transition-delay: 0s, 0.5s, 1.5s;
+  -o-transition-property: width, height, background-color;
+  -o-transition-duration: 0.5s, 1s, 1s;
+  -o-transition-timing-function: ease, ease-out, ease;
+  -o-transition-delay: 0s, 0.5s, 1.5s;
+  transition-property: width, height, background-color;
+  transition-duration: 0.5s, 1s, 1s;
+  transition-timing-function: ease, ease-out, ease;
+  transition-delay: 0s, 0.5s, 1.5s;
+}
+.caja1:hover {
   width: 100px;
   height: 200px;
-  background-color:#f64;
-} 
+  background-color: #f64;
+}
 
 /*EJEMPLO 5*/
 #slider {
-    height: 280px;
+  height: 280px;
 }
 #slider ul:before {
-background: rgb(0,153,153); /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOTk5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzRhOTk5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg2JSIgc3RvcC1jb2xvcj0iIzZhYjdiNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzAwOTk5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-background: -moz-linear-gradient(left,  rgb(0,153,153) 0%, rgb(74,153,153) 66%, rgb(106,183,182) 86%, rgb(0,153,153) 99%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(0,153,153)), color-stop(66%,rgb(74,153,153)), color-stop(86%,rgb(106,183,182)), color-stop(99%,rgb(0,153,153))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  rgb(0,153,153) 0%,rgb(74,153,153) 66%,rgb(106,183,182) 86%,rgb(0,153,153) 99%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  rgb(0,153,153) 0%,rgb(74,153,153) 66%,rgb(106,183,182) 86%,rgb(0,153,153) 99%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  rgb(0,153,153) 0%,rgb(74,153,153) 66%,rgb(106,183,182) 86%,rgb(0,153,153) 99%); /* IE10+ */
-background: linear-gradient(to right,  rgb(0,153,153) 0%,rgb(74,153,153) 66%,rgb(106,183,182) 86%,rgb(0,153,153) 99%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009999', endColorstr='#009999',GradientType=1 ); /* IE6-8 */
+  background: rgb(0, 153, 153); /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOTk5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzRhOTk5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg2JSIgc3RvcC1jb2xvcj0iIzZhYjdiNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzAwOTk5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(
+    left,
+    rgb(0, 153, 153) 0%,
+    rgb(74, 153, 153) 66%,
+    rgb(106, 183, 182) 86%,
+    rgb(0, 153, 153) 99%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, rgb(0, 153, 153)),
+    color-stop(66%, rgb(74, 153, 153)),
+    color-stop(86%, rgb(106, 183, 182)),
+    color-stop(99%, rgb(0, 153, 153))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    rgb(0, 153, 153) 0%,
+    rgb(74, 153, 153) 66%,
+    rgb(106, 183, 182) 86%,
+    rgb(0, 153, 153) 99%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    rgb(0, 153, 153) 0%,
+    rgb(74, 153, 153) 66%,
+    rgb(106, 183, 182) 86%,
+    rgb(0, 153, 153) 99%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    rgb(0, 153, 153) 0%,
+    rgb(74, 153, 153) 66%,
+    rgb(106, 183, 182) 86%,
+    rgb(0, 153, 153) 99%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to right,
+    rgb(0, 153, 153) 0%,
+    rgb(74, 153, 153) 66%,
+    rgb(106, 183, 182) 86%,
+    rgb(0, 153, 153) 99%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009999', endColorstr='#009999',GradientType=1 ); /* IE6-8 */
 
-    border-radius: 30px 0 0 30px;
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.65);
-    content: "";
-    height: 100%;
-    margin-top: -40px;
-    position: absolute;
-    width: 182px;
-    z-index: 100;
+  border-radius: 30px 0 0 30px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.65);
+  content: "";
+  height: 100%;
+  margin-top: -40px;
+  position: absolute;
+  width: 182px;
+  z-index: 100;
 }
 #slider ul {
-    list-style: none outside none;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding: 40px 0;
-    position: relative;
-    width: 182px;
+  list-style: none outside none;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 40px 0;
+  position: relative;
+  width: 182px;
 }
 #slider ul li {
-    height: 40px;
-    width: 182px;
+  height: 40px;
+  width: 182px;
 }
 
 #slider ul li a.menudesplieg {
-    border-bottom: 1px solid #00CFCA;
-    color: white;
-    display: block;
-    font-family: 'Trebuchet MS';
-    font-size: 1.6em;
-    font-style: italic;
-    letter-spacing: -1px;
-    padding-left: 22px;
-    position: absolute;
-    text-decoration: none;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    width: 160px;
-    z-index: 110;
+  border-bottom: 1px solid #00cfca;
+  color: white;
+  display: block;
+  font-family: "Trebuchet MS";
+  font-size: 1.6em;
+  font-style: italic;
+  letter-spacing: -1px;
+  padding-left: 22px;
+  position: absolute;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 160px;
+  z-index: 110;
 }
 #slider ul li div {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
-	 border-radius: 0 15px 15px 0;
-    color: white;
-    height: 266px;
-    left: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0 15px 15px;
-    position: absolute;
-    top: 0;
-	transition: 1s left,1s width,1s opacity;
-    -webkit-transition: 1s left,1s width,1s opacity;
-    -moz-transition: 1s left,1s width,1s opacity;
-    -o-transition: 1s left,1s width,1s opacity;
-    width: 152px;
-    z-index: 50;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+  border-radius: 0 15px 15px 0;
+  color: white;
+  height: 266px;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 15px 15px;
+  position: absolute;
+  top: 0;
+  transition: 1s left, 1s width, 1s opacity;
+  -webkit-transition: 1s left, 1s width, 1s opacity;
+  -moz-transition: 1s left, 1s width, 1s opacity;
+  -o-transition: 1s left, 1s width, 1s opacity;
+  width: 152px;
+  z-index: 50;
 }
 
 #slider ul li div h5 {
-    border-bottom: 1px solid #888;
-    color: #009999;
-    font-family: trebuchet ms;
-    font-size: 2.5em;
-    margin: 0 0 5px;
-    text-align: center;
+  border-bottom: 1px solid #888;
+  color: #009999;
+  font-family: trebuchet ms;
+  font-size: 2.5em;
+  margin: 0 0 5px;
+  text-align: center;
 }
 #slider ul li div p {
-    font-family: trebuchet ms;
-    font-size: 1em;
-    font-style: italic;
-    font-weight: normal;
-    overflow: hidden;
-    padding-top: 15px;
-    width: 276px;
+  font-family: trebuchet ms;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+  overflow: hidden;
+  padding-top: 15px;
+  width: 276px;
 }
 #slider ul li div p.desplieg {
-	float: right;
+  float: right;
 }
 #slider ul li div p.desplieg a {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-radius: 8px 8px 8px 8px;
-    color: #009999;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: bold;
-    height: 18px;
-    margin: 10px 0;
-    padding: 4px;
-    text-decoration: none;
+  background: none repeat scroll 0 0 #ffffff;
+  border-radius: 8px 8px 8px 8px;
+  color: #009999;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  height: 18px;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
 }
 #slider ul li:hover div {
   left: 180px;
