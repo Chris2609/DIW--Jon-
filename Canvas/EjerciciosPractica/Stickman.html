@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    canvas{
+        border: 1px solid black;
+    }
+  </style>
+  <body>
+    <script>
+      window.onload = function () {
+        Iniciar();
+      };
+
+      function Iniciar() {
+        var elem = document.getElementById("canvas");
+        var canvas = elem.getContext("2d");
+
+        canvas.fillRect(0, 0, 200, 300);
+
+        canvas.beginPath();
+        canvas.arc(100, 50, 30, 0, Math.PI * 2, true);
+        canvas.closePath();
+        canvas.fillStyle = "white";
+        canvas.fill();
+
+        canvas.beginPath();
+        canvas.arc(90, 45, 3, 0, Math.PI * 2, true);
+        canvas.closePath();
+        canvas.fillStyle = "#c00";
+        canvas.fill();
+
+        canvas.beginPath();
+        canvas.arc(110, 45, 3, 0, Math.PI * 2, true);
+        canvas.closePath();
+        canvas.fillStyle = "#c00";
+        canvas.fill();
+        
+        canvas.beginPath();
+        canvas.arc(100, 50, 20, 0, Math.PI, false); 
+        canvas.strokeStyle = "#c00";
+        canvas.lineWidth = 3;
+        canvas.stroke();
+        canvas.closePath();
+        
+        canvas.beginPath();
+        canvas.moveTo(100, 80);
+        canvas.lineTo(100, 200);
+        canvas.strokeStyle = "white ";
+        canvas.lineWidth = 5;
+        canvas.stroke();
+
+        canvas.moveTo(100, 100);
+        canvas.lineTo(130, 150);
+        canvas.stroke();
+
+        canvas.moveTo(100, 100);
+        canvas.lineTo(65, 150);
+        canvas.stroke();
+
+        canvas.moveTo(100, 200)
+        canvas.lineTo(200, 200)
+        canvas.stroke();
+
+      }
+    </script>
+
+<canvas id="canvas" width="200px" height="300px"></canvas>
+
+  </body>
+</html>
