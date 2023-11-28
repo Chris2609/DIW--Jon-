@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    canvas {
+      border-radius: 100%;
+    }
+  </style>
+  <body>
+    <script>
+      window.onload = function () {
+        Iniciar();
+      };
+
+      function Iniciar() {
+        var elem = document.getElementById("canvas");
+        var canvas = elem.getContext("2d");
+
+        var img = document.createElement("img");
+        img.setAttribute("src", "Img/imagenRotar.jpg");
+
+        img.addEventListener("load",function () {
+          var angulo = 0;
+
+          var intervalId = setInterval(function () {
+            canvas.clearRect(0, 0, elem.width, elem.height);
+            canvas.save();
+            canvas.translate(elem.width / 2, elem.height / 2);
+            canvas.rotate(angulo);
+            canvas.drawImage(img, -img.width / 2, -img.height / 2);
+            canvas.restore();
+
+            angulo += 0.01;
+          }, 10);
+        });
+      }
+    </script>
+    <canvas id="canvas" width="700px" height="700px"></canvas>
+  </body>
+</html>
