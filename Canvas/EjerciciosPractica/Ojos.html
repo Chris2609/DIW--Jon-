@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello world!</title>
-    <link rel="stylesheet" href="/style.css">
-  </head>  
-  <body>
-    <canvas></canvas>
-    <script src="script.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+  </head>
+  <body onload="Iniciar()">
+    <script>
+      window.onload = function () {
+        Iniciar();
+      };
+
+      function Iniciar() {
+        addEventListener("mousemove", animar);
+
+        var elem = document.getElementById("canvas");
+        var canvas = elem.getContext("2d");
+
+        var img = document.createElement("img");
+        img.setAttribute("src", "Img/illojuan.jpg");
+        img.addEventListener("load", function () {
+          canvas.drawImage(img, 0, 0, 800, 500);
+        });
+
+        function animar(e) {
+          var xraton = e.clientX;
+          var yraton = e.clientY;
+          var xcentro = 380;
+          var ycentro = 210;
+          var distancia = 50; // Ajusta la distancia entre los círculos
+
+          var ang = Math.atan2(xraton - xcentro, yraton - ycentro);
+          var x = xcentro + Math.round(Math.sin(ang) * 13);
+          var y = ycentro + Math.round(Math.cos(ang) * 13);
+
+          // Outer circles (black outline and fill)
+          canvas.beginPath();
+          canvas.arc(xcentro - distancia, ycentro, 23, 0, Math.PI * 2, false);
+          canvas.moveTo(xcentro + distancia + 20, ycentro);
+          canvas.arc(xcentro + distancia, ycentro, 23, 0, Math.PI * 2, false);
+          canvas.strokeStyle = "black"; // Set stroke style to black
+          canvas.fillStyle = "white"; // Set fill style to black
+          canvas.stroke();
+          canvas.fill();
+
+          // Inner circles (white fill)
+          canvas.beginPath();
+          canvas.moveTo(x - 10, y);
+          canvas.arc(x - distancia, y, 10, 0, Math.PI * 2, false);
+          canvas.moveTo(x + 10, y);
+          canvas.arc(x + distancia, y, 10, 0, Math.PI * 2, false);
+
+          // Set fill style to white
+          canvas.fillStyle = "black";
+
+          // Fill the inner circles with white color
+          canvas.fill();
+        }
+      }
+    </script>
+    <canvas id="canvas" width="800px" height="500px"></canvas>
   </body>
 </html>
