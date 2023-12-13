@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  margin: 10px;
+  flex-grow: 1;
+}

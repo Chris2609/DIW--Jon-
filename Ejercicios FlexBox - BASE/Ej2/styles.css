@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.gallery{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}

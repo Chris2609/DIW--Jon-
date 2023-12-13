@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>   
+<html lang="es">   
+<head>   
+<title>Mi página de inicio</title>   
+<meta charset="UTF-8" />   
+<link rel="stylesheet" href="rwd.css" />   
+</head>
+<style>
+    
+@media screen and (max-width: 768px) {  
+    body {  
+       background-color: #fff;  
+    }  
+    div#contenedor {  
+        /* max-width: 720px;  */
+       width: 100%;  
+       margin: 0;  
+    }  
+    header#superior {  
+       background-color: #000;  
+       color: #fff;  
+    }  
+    section#contenido {  
+       float: none;  
+       width: auto;  
+    }  
+    aside#sidebar {  
+       float: none;  
+       width: auto;  
+       margin: 0 0 10px 0;  
+    }  
+    aside#sidebar img {  
+       display: none;  
+    }  
+    article h1 {  
+       font-size: 1.5em;  
+    }  
+ }
+
+</style>
+<body>   
+<div id="contenedor">   
+   <header id="superior">   
+      <h1>Mi sitio web</h1>   
+      <h2>El eslogan de mi sitio web</h2>   
+   </header>   
+   <nav id="navegacion">   
+      <p><a href="#">Vínculo 1</a> | <a href="#">Vínculo 2</a> |   
+<a href="#">Vínculo 3</a> | <a href="#">Vínculo 4</a> |  <a   
+href="#">Vínculo 5</a> | <a href="#">Vínculo 6</a></p>   
+   </nav>   
+   <section id="contenido">   
+      <article>   
+         <h1>Mi primer artículo</h1>   
+         <p>Cum sociis natoque penatibus...</p>    
+         <p>...</p>   
+      </article>   
+      <article>   
+         <h1>Mi segundo artículo</h1>   
+         <p>Aenean lacinia bibendum...</p>    
+         <p>...</p>   
+      </article>   
+      <article>   
+         <h1>Mi tercer artículo</h1>   
+         <p>Donec ullamcorper nulla...</p>    
+         <p>...</p>   
+      </article>   
+   </section>   
+   <aside id="sidebar">   
+      <p><img src="tigre.jpg" alt="Un tigre" /></p>   
+      <ul>   
+         <li>Primero</li>   
+         <li>Segundo</li>   
+         <li>Tercero</li>   
+         <li>Cuarto</li>   
+      </ul>   
+   </aside>  
+   <footer id="pieDePagina">  
+      <p>Creación y realización: un servidor. Contacto 
+: <a  
+href="mailto:yo@micorreo.org">contacto@micorreo.org</a></p> 
+   </footer>  
+</div>  
+</body>  
+</html>

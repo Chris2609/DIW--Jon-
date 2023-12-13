@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-section{
+  display: flex;
+}
+
+article {
+  flex: 1; 
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
