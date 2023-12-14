@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body {
+      background-color: rgb(219, 219, 219);
+    }
+    header {
+      background-color: greenyellow;
+    }
+
+    main {
+      background-color: white;
+    }
+
+    aside {
+      background-color: rgb(189, 189, 189);
+    }
+
+    section {
+      background-color: white;
+    }
+    article {
+      background-color: rgb(0, 153, 255);
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="row ms-5">
+        <h1>HEADER</h1>
+        <p>12 columnas</p>
+      </div>
+    </header>
+
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <main class="col-md-8 col-sm-12">
+          <h1>MAIN</h1>
+          <p class="d-sm-none d-md-block">8 columnas</p>
+          <p class="d-sm-block d-md-none">12 columnas</p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+            laboriosam maxime esse voluptatem expedita, corporis voluptates
+            labore iste porro reprehenderit deleniti corrupti sunt quam id enim,
+            quos fugit. Eum adipisci voluptatibus fuga autem tempora dicta
+            recusandae voluptates vel quo delectus, quibusdam enim. Tempore
+            harum ullam numquam quod corrupti et.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            voluptas sunt, quod iste repudiandae sit dignissimos rerum quos
+            possimus libero laborum ab, nisi eum rem cupiditate provident,
+            accusantium dolores qui fugit laboriosam doloribus doloremque.
+            Blanditiis in tenetur nesciunt asperiores porro quod optio, officiis
+            harum hic, delectus excepturi tempore, reprehenderit corrupti.
+          </p>
+        </main>
+        <aside class="col-md-4 col-sm-12 d-flex align-items-center mt-4 mb-4">
+          <div>
+            <h1>ASIDE</h1>
+            <p>4 columnas</p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="row mt-5 mb-5 justify-content-between">
+        <article class="col-md-3 col-sm-4">
+          <p class="d-sm-none d-md-block">3 columnas</p>
+          <p class="d-sm-block d-md-none">4 columnas</p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos optio dolores unde deserunt saepe officia ut accusamus
+            necessitatibus quam vitae odio hic, quisquam rerum provident
+            sapiente nulla architecto ex alias aliquam eum suscipit laboriosam
+            non aspernatur ducimus. Saepe est assumenda iste molestiae. Ut,
+            veniam similique? Quo neque cupiditate architecto enim.
+          </p>
+        </article>
+        <article class="col-md-3 col-sm-4">
+          <p class="d-sm-none d-md-block">3 columnas</p>
+          <p class="d-sm-block d-md-none">4 columnas</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos optio dolores unde deserunt saepe officia ut accusamus
+            necessitatibus quam vitae odio hic, quisquam rerum provident
+            sapiente nulla architecto ex alias aliquam eum suscipit laboriosam
+            non aspernatur ducimus. Saepe est assumenda iste molestiae. Ut,
+            veniam similique? Quo neque cupiditate architecto enim.
+          </p>
+        </article>
+        <article class="col-md-3 col-sm-4">
+          <p class="d-sm-none d-md-block">3 columnas</p>
+          <p class="d-sm-block d-md-none">4 columnas</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos optio dolores unde deserunt saepe officia ut accusamus
+            necessitatibus quam vitae odio hic, quisquam rerum provident
+            sapiente nulla architecto ex alias aliquam eum suscipit laboriosam
+            non aspernatur ducimus. Saepe est assumenda iste molestiae. Ut,
+            veniam similique? Quo neque cupiditate architecto enim.
+          </p>
+        </article>
+      </section>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <footer class="fixed-bottom">
+      <div class="row ms-2">
+        <h1>FOOTER</h1>
+        <p>12 columnas</p>
+      </div>
+  </footer>
+</html>
