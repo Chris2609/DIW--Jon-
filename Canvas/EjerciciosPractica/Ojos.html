@@ -29,33 +29,28 @@
           var yraton = e.clientY;
           var xcentro = 380;
           var ycentro = 210;
-          var distancia = 50; // Ajusta la distancia entre los círculos
-
+          var distancia = 50;
           var ang = Math.atan2(xraton - xcentro, yraton - ycentro);
           var x = xcentro + Math.round(Math.sin(ang) * 13);
           var y = ycentro + Math.round(Math.cos(ang) * 13);
 
-          // Outer circles (black outline and fill)
           canvas.beginPath();
           canvas.arc(xcentro - distancia, ycentro, 23, 0, Math.PI * 2, false);
           canvas.moveTo(xcentro + distancia + 20, ycentro);
           canvas.arc(xcentro + distancia, ycentro, 23, 0, Math.PI * 2, false);
-          canvas.strokeStyle = "black"; // Set stroke style to black
-          canvas.fillStyle = "white"; // Set fill style to black
+          canvas.strokeStyle = "black";
+          canvas.fillStyle = "white";
           canvas.stroke();
           canvas.fill();
 
-          // Inner circles (white fill)
           canvas.beginPath();
           canvas.moveTo(x - 10, y);
           canvas.arc(x - distancia, y, 10, 0, Math.PI * 2, false);
           canvas.moveTo(x + 10, y);
           canvas.arc(x + distancia, y, 10, 0, Math.PI * 2, false);
 
-          // Set fill style to white
           canvas.fillStyle = "black";
 
-          // Fill the inner circles with white color
           canvas.fill();
         }
       }
