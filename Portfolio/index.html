@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Inicio</title>
 
     <!-- Bootstrap -->
     <link
@@ -29,81 +29,81 @@
     <link rel="stylesheet" href="CSS/BarraNavegacion.css" />
   </head>
   <body>
-        <!-- Barra navegacion -->
-        <header>
-          <div class="contenidoHeader">
-            <a target="_blank" href="https://github.com/Chris2609" class="logo">
-              Christian Camarasa</a
+    <!-- Barra navegacion -->
+    <header>
+      <div class="contenidoHeader">
+        <a target="_blank" href="https://github.com/Chris2609" class="logo">
+          Christian Camarasa</a
+        >
+
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="index.html">Inicio</a>
+            </li>
+          </ul>
+
+          <ul>
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Proyectos
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="Proyectos.html">DWC</a></li>
+                <li><a class="dropdown-item" href="Proyectos.html">DIW</a></li>
+              </ul>
+            </div>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="SobreMi.html">Sobre mí</a>
+            </li>
+          </ul>
+
+          <label for="check" class="checkbtn">
+            <i
+              class="fas fa-bars fa-2xl"
+              style="color: #b5179e; width: 900px"
+            ></i>
+          </label>
+        </nav>
+      </div>
+
+      <input type="checkbox" id="check" />
+      <div class="navResponsive">
+        <ul>
+          <li class="linksResponsive"><a href="index.html">Inicio</a></li>
+          <div class="linksResponsive dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
-    
-            <nav class="nav">
-              <ul>
-                <li>
-                  <a href="Inicio.html">Inicio</a>
-                </li>
-              </ul>
-    
-              <ul>
-                <div class="dropdown">
-                  <a
-                    class="dropdown-toggle"
-                    href="#"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Proyectos
-                  </a>
-    
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="Proyectos.html">DWC</a></li>
-                    <li><a class="dropdown-item" href="Proyectos.html">DIW</a></li>
-                  </ul>
-                </div>
-              </ul>
-    
-              <ul>
-                <li>
-                  <a href="SobreMi.html">Sobre mí</a>
-                </li>
-              </ul>
-    
-              <label for="check" class="checkbtn">
-                <i
-                  class="fas fa-bars fa-2xl"
-                  style="color: #b5179e; width: 900px"
-                ></i>
-              </label>
-            </nav>
-          </div>
-    
-          <input type="checkbox" id="check" />
-          <div class="navResponsive">
-            <ul>
-              <li class="linksResponsive"><a href="Inicio.html">Inicio</a></li>
-              <div class="linksResponsive dropdown">
-                <a
-                  class="dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Proyectos
-                </a>
-    
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="Proyectos.html">DWC</a></li>
-                  <li><a class="dropdown-item" href="Proyectos.html">DIW</a></li>
-                </ul>
-              </div>
-              <li class="linksResponsive"><a href="SobreMi.html">Sobre mí</a></li>
+              Proyectos
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="Proyectos.html">DWC</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html">DIW</a></li>
             </ul>
           </div>
-        </header>
-        <!-- Fin barra navegacion -->
+          <li class="linksResponsive"><a href="SobreMi.html">Sobre mí</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- Fin barra navegacion -->
 
     <div class="inicio">
       <h1>Portfolio</h1>
@@ -196,7 +196,9 @@
               <!-- Grid column -->
               <div class="col-md-2">
                 <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" class="text-white">Correo</a>
+                  <a href="mailto:ikbdb@plaiaundi.net" class="text-white"
+                    >Correo</a
+                  >
                 </h6>
               </div>
               <!-- Grid column -->

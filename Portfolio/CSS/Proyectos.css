@@ -1,65 +1,70 @@
-body{
-    background: url("../Imagenes/fondoProyectos.jpg") no-repeat fixed;
-    background-size: cover;
+body {
+  background: url("../Imagenes/fondoProyectos.jpg") no-repeat fixed;
+  background-size: cover;
 }
 
-#misProyectos{
-    text-align: center;
-    color: #4895ff;
-}  
+#misProyectos {
+  text-align: center;
+  color: #4895ff;
+}
 /* cards */
 
 .cards {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0094e900;
-    border: none;
-    flex-wrap: wrap;
-    /*poner distancia entre items flex con "gap"*/
-    gap: 100px;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0094e900;
+  border: none;
+  flex-wrap: wrap;
+  /*poner distancia entre items flex con "gap"*/
+  gap: 100px;
+}
 
-  .glassBox {
-    margin-inline: 1%;
-    width: 100%;
-    height: 400px;
-    max-width: 400px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-right-color: rgba(255, 255, 255, 0.1);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .glassBox, .glassBox * {
-    transition: all ease-in-out 400ms;
-  }
-  .glassBox__imgBox img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .glassBox__title {
-    text-align: center;
-    margin-top: 15px;
-    color: #FFF;
-    font-size: 20px;
-    font-weight: 400;
-  }
+.glassBox {
+  margin-inline: 1%;
+  width: 100%;
+  height: 400px;
+  max-width: 400px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.glassBox,
+.glassBox * {
+  transition: all ease-in-out 400ms;
+}
+.glassBox__imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.glassBox__title {
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
 
-  .glassBox:hover .glassBox__imgBox {
-    transform: translateY(-50px);
-  }
-  .glassBox:hover .glassBox__imgBox img {
-    transform: translate(-20px, -40px) rotate(-15deg) scale(1.15);
-  }
+.glassBox:hover .glassBox__imgBox {
+  transform: translateY(-50px);
+}
+.glassBox:hover .glassBox__imgBox img {
+  transform: translate(-20px, -40px) rotate(-15deg) scale(1.15);
+}
 
+.tamanoImagenes {
+  width: 368px !important;
+  height: 329.55px !important;
+}
