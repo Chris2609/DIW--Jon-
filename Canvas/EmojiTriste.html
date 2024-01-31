@@ -38,5 +38,43 @@
     </script>
 
     <canvas id="canvas" width="500px" height="300px"></canvas>
+
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+  
+      // Dibujar el círculo amarillo
+      ctx.beginPath();
+      ctx.arc(150, 150, 100, 0, 2 * Math.PI);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+  
+      // Dibujar los ojos
+      ctx.beginPath();
+      ctx.arc(100, 100, 10, 0, 2 * Math.PI);
+      ctx.fillStyle = "black";
+      ctx.fill();
+  
+      ctx.beginPath();
+      ctx.arc(200, 100, 10, 0, 2 * Math.PI);
+      ctx.fillStyle = "black";
+      ctx.fill();
+  
+      // Dibujar la boca
+      ctx.beginPath();
+      ctx.arc(150, 175, 50, 0, Math.PI, true);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+  
+      // Dibujar la gota de lágrima
+      ctx.beginPath();
+      ctx.moveTo(200, 110);
+      ctx.lineTo(205, 120);
+      ctx.lineTo(210, 110);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+    </script>
   </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="cajacanvas">
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </section>
+
+    <script>
+        function iniciar() {
+            var elem = document.getElementById('canvas')
+            var ctx = elem.getContext('2d')
+
+            ctx.beginPath();
+            ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // círculo exterior
+            ctx.closePath();
+            ctx.fillStyle = 'yellow'
+            ctx.fill();
+            ctx.fillStyle = 'black';
+            ctx.beginPath();
+            ctx.arc(75, 75, 10, 0, Math.PI, false); // boca (sentido reloj)
+            ctx.closePath();
+            ctx.fill();
+            
+            ctx.moveTo(65, 65);
+            ctx.beginPath();
+            ctx.arc(60, 65, 2, 0, Math.PI * 2, true); // ojo izquierdo
+            ctx.closePath();
+            ctx.fill();
+            ctx.moveTo(95, 65);
+            ctx.beginPath();
+            ctx.arc(90, 65, 2, 0, Math.PI * 2, true); // ojo derecho
+            ctx.closePath();
+            ctx.fill();
+        }
+        addEventListener("load", iniciar)
+    </script>
+</body>
+
+</html>

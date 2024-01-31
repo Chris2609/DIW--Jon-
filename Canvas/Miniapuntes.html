@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+
+
+        // Obtener el contexto del canvas
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        // Especificamos el color de relleno
+        ctx.strokeStyle = 'black';
+
+        // Dibujar un círculo:
+        ctx.beginPath(); // empieza a dibujar
+        
+        /* 
+            parametros: posicionX, posicionY, longitudRadio, anguloDeDibujoEnRadianes, comoDibujarElCirculo (an2)
+                an1: No entiendo qué hace internamente pero dudo que ion lo pida, poner 0 por defecto
+                an2: Si en vez de 2 pones 1, solo dibuja la mitad del círculo
+        */
+        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+        ctx.fill(); //especifica que rellene el dibujo
+        ctx.stroke(); // termina el dibujo, si no se especifica fill, hará solo el contorno
+
+        // Dibujar un cuadrado
+        /*
+            parametros: posicionX, posicionY, anchura, altura
+        */
+        ctx.fillRect(200, 50, 80, 80); 
+        // si se quiere un cuadrado vacío se utiliza strokeRect en vez de fillRect
+
+        // Dibujar un triángulo
+        ctx.beginPath();
+        ctx.moveTo(300, 200); // Movemos la posicion de inicio
+        ctx.lineTo(350, 300); // dibujamos una linea desde la posicion de inicio, parametros: posInicialX, posInicialY
+        ctx.lineTo(250, 300);
+        ctx.closePath(); // cerramos el triángulo desde el último punto dibujado hasta el primero
+        ctx.fill();
+        ctx.stroke();
+
+        // Dibujar una línea
+        ctx.beginPath();
+        ctx.moveTo(50, 250);
+        ctx.lineTo(150, 250);
+        ctx.lineWidth = 2; // especificación de la altura de la línea
+        ctx.stroke();
+
+
+    </script>
+</body>
+</html>

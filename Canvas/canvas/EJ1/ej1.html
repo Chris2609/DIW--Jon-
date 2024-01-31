@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="200" height="300" style="border: 1px black solid; background-color: black; "></canvas>
+    <script>
+        var canvas = document.getElementById('mycanvas'); // seleccionamos el elemento canvas
+        var ctx = canvas.getContext('2d'); // seleccionamos el contexto 2d a partir del elemento
+
+        
+        
+        var startx = 100; // Posicion X
+        var starty = 50; // Posicion Y
+        ctx.fillStyle = 'white'; // el color de la linea, azul, se pueden usar colores en ingles, en formato hexadecimal, en rgb y rgba
+        ctx.beginPath();
+        ctx.arc(startx, starty, 20, 0, 2 * Math.PI); // Creamos un circulo para la cabeza. el orden de los parámetros son: posición x, posición y ancho y alto
+        ctx.fill();
+
+        
+        ctx.lineWidth = 1; // Grosor de la linea
+        ctx.strokeStyle = "#C00"
+        ctx.beginPath();
+        ctx.arc(100, 50, 15, 0, Math.PI, false);
+        ctx.stroke();
+
+        ctx.fillStyle = "#C00"
+        ctx.beginPath();
+        ctx.arc(90, 45, 3, 0, Math.PI * 2, true);
+        ctx.fill();
+
+        ctx.fillStyle = "#C00"
+        ctx.beginPath();
+        ctx.arc(110, 45, 3, 0, Math.PI * 2, true);
+        ctx.fill();
+
+        ctx.lineWidth = 8; // Grosor de la linea
+
+        ctx.strokeStyle = 'white'; // el color de la linea, azul, se pueden usar colores en ingles, en formato hexadecimal, en rgb y rgba
+        ctx.beginPath(); // Cuerpo
+        ctx.moveTo(startx, starty + 20);
+        ctx.lineTo(startx, starty + 100);
+        ctx.stroke();
+
+        ctx.beginPath(); // Dibujar mano izq
+        ctx.moveTo(startx, starty + 25);
+        ctx.lineTo(startx - 30, starty + 60);
+        ctx.stroke();
+
+        ctx.beginPath(); // Dibujar mano der
+        ctx.moveTo(startx, starty + 25);
+        ctx.lineTo(startx + 30, starty + 60);
+        ctx.stroke();
+
+        ctx.beginPath(); // Pie Izq
+        ctx.moveTo(startx, starty + 100);
+        ctx.lineTo(startx - 30, starty + 150);
+        ctx.stroke();
+
+        ctx.beginPath(); // Pie der
+        ctx.moveTo(startx, starty + 100);
+        ctx.lineTo(startx + 30, starty + 150);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

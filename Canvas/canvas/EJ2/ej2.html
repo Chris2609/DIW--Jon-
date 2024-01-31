@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+  <title>Movimiento y Rotación de Imagen</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+
+  <script>
+    // Obtén el contexto del canvas
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // Cargar la imagen
+    var img = new Image();
+    img.src = 'asno.png'; // Reemplaza 'tu_imagen.jpg' con la ruta de tu imagen
+
+    // Posición inicial de la imagen
+    var x = 50;
+    var y = 50;
+
+    // Velocidades de movimiento en píxeles por intervalo
+    var dx = 2;
+    var dy = 2;
+
+    // Ángulo de rotación en radianes
+    var angle = 0;
+
+    function draw() {
+      // Limpiar el canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Guardar el estado actual del contexto
+      ctx.save();
+
+      // Mover el origen del contexto al centro de la imagen
+      ctx.translate(x + img.width / 2, y + img.height / 2);
+
+      // Aplicar rotación al contexto
+      ctx.rotate(angle);
+
+      // Dibujar la imagen en la nueva posición y rotación
+      ctx.drawImage(img, -img.width / 2, -img.height / 2);
+
+      // Restaurar el estado del contexto
+      ctx.restore();
+
+      // Actualizar la posición de la imagen
+      x += dx;
+      y += dy;
+
+      // Actualizar el ángulo de rotación
+      angle += 0.02;
+
+      // Verificar si la imagen ha alcanzado los límites del canvas
+      if (x > canvas.width - img.width || x < 0) {
+        dx = -dx;
+      }
+
+      if (y > canvas.height - img.height || y < 0) {
+        dy = -dy;
+      }
+    }
+
+    // Establecer un intervalo para llamar a la función draw cada 10 milisegundos
+    setInterval(draw, 10);
+  </script>
+</body>
+</html>

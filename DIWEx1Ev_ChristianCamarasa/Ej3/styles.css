@@ -1,0 +1,34 @@
+#mario{
+    width: 39px;
+    height: 40px;
+    margin: auto;
+    background: url("Mario_spin.png") repeat-x;
+    position: relative;
+    top: 50px;
+    transition: all ease-out; 
+}
+
+ body:hover #mario, #mario:hover{
+    animation: spin steps(4) 0.2s 4, salto 1s;
+    
+}
+@keyframes spin {
+  0% {
+    background-position: 0;
+  }
+  100%{
+    background-position: -160px;
+  }
+}
+
+@keyframes salto{
+    0%{
+        top: 50px;
+    }
+    50%{
+        top: 10px;
+    }
+    100%{
+        top: 50px;
+    }
+}

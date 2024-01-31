@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+  <title>Movimiento de dos imágenes</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+
+  <script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // Cargar las imágenes
+    var img1 = new Image();
+    img1.src = 'tia_turbina.jpg'; // Ruta de la primera imagen
+
+    var img2 = new Image();
+    img2.src = 'trans.jpg'; // Ruta de la segunda imagen
+
+    // Tamaños de las imágenes
+    var imgWidth = 100;
+    var imgHeight = 100;
+
+    // Posiciones iniciales de las imágenes
+    var x1 = 50;
+    var x2 = 300;
+    var y2 = 200; // Posición vertical de la segunda imagen
+
+    // Velocidades de movimiento en píxeles por intervalo
+    var dx1 = 2;
+    var dx2 = 2;
+
+    function draw() {
+      // Limpiar el canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Dibujar la primera imagen en su posición
+      ctx.drawImage(img1, x1, 50, imgWidth, imgHeight);
+
+      // Dibujar la segunda imagen en su posición
+      ctx.drawImage(img2, x2, y2, imgWidth, imgHeight);
+
+      // Actualizar la posición de la primera imagen
+      x1 += dx1;
+
+      // Actualizar la posición de la segunda imagen
+      x2 += dx2;
+
+      // Verificar si la primera imagen ha alcanzado los límites del canvas
+      if (x1 > canvas.width - imgWidth || x1 < 0) {
+        dx1 = -dx1;
+      }
+
+      // Verificar si la segunda imagen ha alcanzado los límites del canvas
+      if (x2 > canvas.width - imgWidth || x2 < 0) {
+        dx2 = -dx2;
+      }
+    }
+
+    // Establecer un intervalo para llamar a la función draw cada 10 milisegundos
+    setInterval(draw, 10);
+  </script>
+</body>
+</html>

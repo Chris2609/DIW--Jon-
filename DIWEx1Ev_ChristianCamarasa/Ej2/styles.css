@@ -1,0 +1,61 @@
+.notas li {
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    /*Tambien se puede poner de esta forma para que la transicion solo afecte al cambio de visibilidad->
+        transition: visibility 1s ease-in-out;
+    Pero como en este caso solo tenemos esta transición, no importa cuál usemos
+    */
+  }
+
+  .container:hover .notas li {
+    transition: all 1s ease-in-out;
+    opacity: 100;
+    visibility: visible;
+  }
+
+  .notas li p {
+    position: absolute;
+    margin: 10px 0 0 0;
+    padding: 0.3em;
+    color: white;
+    background-color: black;
+    visibility: hidden;
+    top: -50px;
+    left: 0px;
+  }
+
+  .notas li:hover p {
+    visibility: visible;
+  }
+
+  .notas li#jon {
+    width: 140px;
+    height: 150px;
+    top: 200px;
+    left: 605px;
+  }
+
+  .notas li#sonia {
+    width: 140px;
+    height: 110px;
+    top: 200px;
+    left: 115px;
+  }
+
+  .notas li#david {
+    width: 100px;
+    height: 110px;
+    top: 50px;
+    left: 385px;
+  }
+
+  .notas li#enrique {
+    width: 100px;
+    height: 110px;
+    top: 350px;
+    left: 400px;
+  }
