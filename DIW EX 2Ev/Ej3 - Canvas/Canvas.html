@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="800"></canvas>
+
+    <script>
+      var elem = document.getElementById("canvas");
+      var canvas = elem.getContext("2d");
+      var img = document.createElement("img");
+      img.setAttribute("src", "Naves_enemigas.jpg");
+      
+      img.addEventListener("load", function () {
+        canvas.drawImage(img, 230, 0, 270, 250, 400, 50, 230, 215);
+        
+        canvas.beginPath();
+        canvas.moveTo(520, 540);
+        canvas.lineTo(505, 565);
+        canvas.lineTo(535, 565);
+        canvas.closePath();
+        canvas.stroke();
+        canvas.fillStyle = "grey";
+        canvas.fill()
+
+        canvas.strokeRect(505, 565, 30, 50);
+        canvas.fillRect(505, 565, 30, 50);
+
+        canvas.beginPath();
+        canvas.arc(495, 620, 20, 0, Math.PI * 2, true);
+        canvas.stroke();
+        canvas.fill()
+        canvas.closePath();
+
+        canvas.beginPath();
+        canvas.arc(545, 620, 20, 0, Math.PI * 2, true);
+        canvas.stroke();
+        canvas.fill()
+        canvas.closePath();
+      });
+    </script>
+  </body>
+</html>
